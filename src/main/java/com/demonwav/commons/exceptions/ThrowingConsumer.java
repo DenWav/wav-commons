@@ -21,6 +21,9 @@ import java.util.function.Consumer;
 @FunctionalInterface
 public interface ThrowingConsumer<T> extends Consumer<T> {
 
+    /**
+     * Delegates to {@link #acceptThrowing(Object)}.
+     */
     @Override
     default void accept(T t) {
         try {

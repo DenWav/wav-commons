@@ -21,6 +21,9 @@ import java.util.function.IntPredicate;
 @FunctionalInterface
 public interface ThrowingIntPredicate extends IntPredicate {
 
+    /**
+     * Delegates to {@link #testThrowing(int)}.
+     */
     @Override
     default boolean test(int value) {
         try {

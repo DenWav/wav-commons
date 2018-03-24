@@ -21,6 +21,9 @@ import java.util.function.LongSupplier;
 @FunctionalInterface
 public interface ThrowingLongSupplier extends LongSupplier {
 
+    /**
+     * Delegates to {@link #getAsLongThrowing()}.
+     */
     @Override
     default long getAsLong() {
         try {

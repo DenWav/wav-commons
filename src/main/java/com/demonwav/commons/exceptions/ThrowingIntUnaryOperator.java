@@ -21,6 +21,9 @@ import java.util.function.IntUnaryOperator;
 @FunctionalInterface
 public interface ThrowingIntUnaryOperator extends IntUnaryOperator {
 
+    /**
+     * Delegates to {@link #applyAsIntThrowing(int)}.
+     */
     @Override
     default int applyAsInt(int operand) {
         try {

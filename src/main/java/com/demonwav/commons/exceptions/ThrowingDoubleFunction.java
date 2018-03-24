@@ -21,6 +21,9 @@ import java.util.function.DoubleFunction;
 @FunctionalInterface
 public interface ThrowingDoubleFunction<R> extends DoubleFunction<R> {
 
+    /**
+     * Delegates to {@link #applyThrowing(double)}.
+     */
     @Override
     default R apply(double value) {
         try {

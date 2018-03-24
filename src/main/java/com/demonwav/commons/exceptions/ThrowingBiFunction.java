@@ -21,6 +21,9 @@ import java.util.function.BiFunction;
 @FunctionalInterface
 public interface ThrowingBiFunction<T, U, R> extends BiFunction<T, U, R> {
 
+    /**
+     * Delegates to {@link #applyThrowing(Object, Object)}.
+     */
     @Override
     default R apply(T t, U u) {
         try {

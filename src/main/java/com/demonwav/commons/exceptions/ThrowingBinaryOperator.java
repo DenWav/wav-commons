@@ -18,6 +18,7 @@ package com.demonwav.commons.exceptions;
 
 import java.util.function.BinaryOperator;
 
+@SuppressWarnings("WeakerAccess")
 @FunctionalInterface
 public interface ThrowingBinaryOperator<T> extends BinaryOperator<T>, ThrowingBiFunction<T,T,T> {
 }

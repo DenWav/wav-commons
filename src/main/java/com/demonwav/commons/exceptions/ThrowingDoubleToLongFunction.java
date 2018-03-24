@@ -21,6 +21,9 @@ import java.util.function.DoubleToLongFunction;
 @FunctionalInterface
 public interface ThrowingDoubleToLongFunction extends DoubleToLongFunction {
 
+    /**
+     * Delegates to {@link #applyAsLongThrowing(double)} S}.
+     */
     @Override
     default long applyAsLong(double value) {
         try {

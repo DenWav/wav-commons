@@ -21,6 +21,9 @@ import java.util.function.BooleanSupplier;
 @FunctionalInterface
 public interface ThrowingBooleanSupplier extends BooleanSupplier {
 
+    /**
+     * Delegates to {@link #getAsBooleanThrowing()}.
+     */
     @Override
     default boolean getAsBoolean() {
         try {

@@ -21,6 +21,9 @@ import java.util.function.LongConsumer;
 @FunctionalInterface
 public interface ThrowingLongConsumer extends LongConsumer {
 
+    /**
+     * Delegates to {@link #acceptThrowing(long)}.
+     */
     @Override
     default void accept(long value) {
         try {

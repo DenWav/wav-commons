@@ -21,6 +21,9 @@ import java.util.function.BiPredicate;
 @FunctionalInterface
 public interface ThrowingBiPredicate<T, U> extends BiPredicate<T, U> {
 
+    /**
+     * Delegates to {@link #testThrowing(Object, Object)}.
+     */
     @Override
     default boolean test(T t, U u) {
         try {

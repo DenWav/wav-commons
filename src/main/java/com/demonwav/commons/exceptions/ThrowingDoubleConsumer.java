@@ -21,6 +21,9 @@ import java.util.function.DoubleConsumer;
 @FunctionalInterface
 public interface ThrowingDoubleConsumer extends DoubleConsumer {
 
+    /**
+     * Delegates to {@link #acceptThrowing(double)}.
+     */
     @Override
     default void accept(double value) {
         try {

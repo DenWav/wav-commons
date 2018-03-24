@@ -21,6 +21,9 @@ import java.util.function.LongFunction;
 @FunctionalInterface
 public interface ThrowingLongFunction<R> extends LongFunction<R> {
 
+    /**
+     * Delegates to {@link #applyThrowing(long)}.
+     */
     @Override
     default R apply(long value) {
         try {

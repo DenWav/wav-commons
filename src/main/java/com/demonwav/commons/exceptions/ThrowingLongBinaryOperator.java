@@ -21,6 +21,9 @@ import java.util.function.LongBinaryOperator;
 @FunctionalInterface
 public interface ThrowingLongBinaryOperator extends LongBinaryOperator {
 
+    /**
+     * Delegates to {@link #applyAsLongThrowing(long, long)}.
+     */
     @Override
     default long applyAsLong(long left, long right) {
         try {

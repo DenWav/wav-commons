@@ -21,6 +21,9 @@ import java.util.function.LongPredicate;
 @FunctionalInterface
 public interface ThrowingLongPredicate extends LongPredicate {
 
+    /**
+     * Delegates to {@link #testThrowing(long)}.
+     */
     @Override
     default boolean test(long value) {
         try {

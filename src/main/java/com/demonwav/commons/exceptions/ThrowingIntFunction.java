@@ -21,6 +21,9 @@ import java.util.function.IntFunction;
 @FunctionalInterface
 public interface ThrowingIntFunction<R> extends IntFunction<R> {
 
+    /**
+     * Delegates to {@link #applyThrowing(int)}.
+     */
     @Override
     default R apply(int value) {
         try {

@@ -21,6 +21,9 @@ import java.util.function.Function;
 @FunctionalInterface
 public interface ThrowingFunction<T, R> extends Function<T, R> {
 
+    /**
+     * Delegates to {@link #applyThrowing(Object)}.
+     */
     @Override
     default R apply(T t) {
         try {

@@ -21,6 +21,9 @@ import java.util.function.ToLongFunction;
 @FunctionalInterface
 public interface ThrowingToLongFunction<T> extends ToLongFunction<T> {
 
+    /**
+     * Delegates to {@link #applyAsLongThrowing(Object)}.
+     */
     @Override
     default long applyAsLong(T value) {
         try {

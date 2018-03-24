@@ -21,6 +21,9 @@ import java.util.function.ToLongBiFunction;
 @FunctionalInterface
 public interface ThrowingToLongBiFunction<T, U> extends ToLongBiFunction<T, U> {
 
+    /**
+     * Delegates to {@link #applyAsLongThrowing(Object, Object)}.
+     */
     @Override
     default long applyAsLong(T t, U u) {
         try {

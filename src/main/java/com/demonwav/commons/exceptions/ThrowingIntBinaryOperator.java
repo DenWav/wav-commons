@@ -21,6 +21,9 @@ import java.util.function.IntBinaryOperator;
 @FunctionalInterface
 public interface ThrowingIntBinaryOperator extends IntBinaryOperator {
 
+    /**
+     * Delegates to {@link #applyAsIntThrowing(int, int)}.
+     */
     @Override
     default int applyAsInt(int left, int right) {
         try {

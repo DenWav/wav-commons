@@ -21,6 +21,9 @@ import java.util.function.IntSupplier;
 @FunctionalInterface
 public interface ThrowingIntSupplier extends IntSupplier {
 
+    /**
+     * Delegates to {@link #getAsIntThrowing()}.
+     */
     @Override
     default int getAsInt() {
         try {

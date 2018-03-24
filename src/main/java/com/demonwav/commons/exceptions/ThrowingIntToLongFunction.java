@@ -21,6 +21,9 @@ import java.util.function.IntToLongFunction;
 @FunctionalInterface
 public interface ThrowingIntToLongFunction extends IntToLongFunction {
 
+    /**
+     * Delegates to {@link #applyAsLongThrowing(int)}.
+     */
     @Override
     default long applyAsLong(int value) {
         try {

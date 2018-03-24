@@ -21,6 +21,9 @@ import java.util.function.BiConsumer;
 @FunctionalInterface
 public interface ThrowingBiConsumer<T, U> extends BiConsumer<T, U> {
 
+    /**
+     * Delegates to {@link #acceptThrowing(Object, Object)}.
+     */
     @Override
     default void accept(T t, U u) {
         try {

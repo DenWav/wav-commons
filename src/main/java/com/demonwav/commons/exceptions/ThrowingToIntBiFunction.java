@@ -21,6 +21,9 @@ import java.util.function.ToIntBiFunction;
 @FunctionalInterface
 public interface ThrowingToIntBiFunction<T, U> extends ToIntBiFunction<T, U> {
 
+    /**
+     * Delegates to {@link #applyAsIntThrowing(Object, Object)}.
+     */
     @Override
     default int applyAsInt(T t, U u) {
         try {

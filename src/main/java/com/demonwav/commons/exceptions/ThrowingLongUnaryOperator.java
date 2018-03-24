@@ -21,6 +21,9 @@ import java.util.function.LongUnaryOperator;
 @FunctionalInterface
 public interface ThrowingLongUnaryOperator extends LongUnaryOperator {
 
+    /**
+     * Delegates to {@link #applyAsLongThrowing(long)}.
+     */
     @Override
     default long applyAsLong(long operand) {
         try {

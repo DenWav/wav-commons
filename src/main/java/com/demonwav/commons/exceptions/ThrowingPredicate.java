@@ -21,6 +21,9 @@ import java.util.function.Predicate;
 @FunctionalInterface
 public interface ThrowingPredicate<T> extends Predicate<T> {
 
+    /**
+     * Delegates to {@link #testThrowing(Object)}.
+     */
     @Override
     default boolean test(T t) {
         try {

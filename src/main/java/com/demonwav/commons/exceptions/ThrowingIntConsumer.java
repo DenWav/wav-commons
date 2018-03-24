@@ -21,6 +21,9 @@ import java.util.function.IntConsumer;
 @FunctionalInterface
 public interface ThrowingIntConsumer extends IntConsumer {
 
+    /**
+     * Delegates to {@link #acceptThrowing(int)}.
+     */
     @Override
     default void accept(int value) {
         try {

@@ -21,6 +21,9 @@ import java.util.function.DoubleUnaryOperator;
 @FunctionalInterface
 public interface ThrowingDoubleUnaryOperator extends DoubleUnaryOperator {
 
+    /**
+     * Delegates to {@link #applyAsDoubleThrowing(double)}.
+     */
     @Override
     default double applyAsDouble(double operand) {
         try {

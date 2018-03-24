@@ -21,6 +21,9 @@ import java.util.function.DoubleBinaryOperator;
 @FunctionalInterface
 public interface ThrowingDoubleBinaryOperator extends DoubleBinaryOperator {
 
+    /**
+     * Delegates to {@link #applyAsDoubleThrowing(double, double)}.
+     */
     @Override
     default double applyAsDouble(double left, double right) {
         try {

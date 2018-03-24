@@ -21,6 +21,9 @@ import java.util.function.Supplier;
 @FunctionalInterface
 public interface ThrowingSupplier<T> extends Supplier<T> {
 
+    /**
+     * Delegates to {@link #getThrowing()}.
+     */
     @Override
     default T get() {
         try {

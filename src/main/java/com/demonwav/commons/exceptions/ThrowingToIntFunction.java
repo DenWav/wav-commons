@@ -21,6 +21,9 @@ import java.util.function.ToIntFunction;
 @FunctionalInterface
 public interface ThrowingToIntFunction<T> extends ToIntFunction<T> {
 
+    /**
+     * Delegates to {@link #applyAsIntThrowing(Object)}.
+     */
     @Override
     default int applyAsInt(T value) {
         try {

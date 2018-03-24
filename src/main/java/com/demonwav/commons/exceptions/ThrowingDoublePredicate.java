@@ -21,6 +21,9 @@ import java.util.function.DoublePredicate;
 @FunctionalInterface
 public interface ThrowingDoublePredicate extends DoublePredicate {
 
+    /**
+     * Delegates to {@link #testThrowing(double)}.
+     */
     @Override
     default boolean test(double value) {
         try {

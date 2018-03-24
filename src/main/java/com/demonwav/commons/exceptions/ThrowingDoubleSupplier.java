@@ -21,6 +21,9 @@ import java.util.function.DoubleSupplier;
 @FunctionalInterface
 public interface ThrowingDoubleSupplier extends DoubleSupplier {
 
+    /**
+     * Delegates to {@link #getAsDoubleThrowing()}.
+     */
     @Override
     default double getAsDouble() {
         try {

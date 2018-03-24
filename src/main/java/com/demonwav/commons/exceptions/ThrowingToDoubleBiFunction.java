@@ -21,6 +21,9 @@ import java.util.function.ToDoubleBiFunction;
 @FunctionalInterface
 public interface ThrowingToDoubleBiFunction<T, U> extends ToDoubleBiFunction<T, U> {
 
+    /**
+     * Delegates to {@link #applyAsDoubleThrowing(Object, Object)}.
+     */
     @Override
     default double applyAsDouble(T t, U u) {
         try {

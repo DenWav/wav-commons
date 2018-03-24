@@ -18,6 +18,7 @@ package com.demonwav.commons.exceptions;
 
 import java.util.function.UnaryOperator;
 
+@SuppressWarnings("WeakerAccess")
 @FunctionalInterface
 public interface ThrowingUnaryOperator<T> extends UnaryOperator<T>, ThrowingFunction<T, T> {
 }
